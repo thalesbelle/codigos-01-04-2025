@@ -1,0 +1,81 @@
+@font-face {
+    font-family: Fiore;
+    src: url("fiore_ebrey/Fiore\ Ebrey\ Demo.ttf");
+}
+
+html{
+    height: 100%;
+}
+
+#cabecalho{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, #BF045B, #D90452, #D95959);
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#degrade{
+    background: linear-gradient(to bottom,#D95959, #e46b6b, #f18383, #f7a0a0);
+    height: 100%;
+}
+
+#tituloJornal{
+    text-align: center;
+    position: relative;
+    top: 50px;
+    font-size: 80px;
+    font-family: Fiore;
+    margin: 0;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(97, 97, 97), white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+#noticia1{
+    z-index: 1;
+    background-color: #303440;
+    height: 440px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 120px;
+    margin-left: 41%;
+    margin-right: 41%;
+    transition: all 0.8s ease-in-out;
+}
+
+#noticia1:hover{
+    background-color: #D98D62;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    margin-right: 170px;
+    margin-left: 170px;
+}
+
+#imagemKanye{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    right: 2px;
+    left: 2px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.8s ease-in-out;
+}
+
+#imagemKanye:hover{
+    border-radius: 100px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    left: -600px;
+    transition: all 0.8s ease-in-out;
+}
