@@ -3,6 +3,11 @@
     src: url("fiore_ebrey/Fiore\ Ebrey\ Demo.ttf");
 }
 
+@font-face {
+    font-family: Doom;
+    src: url("amazdoom/AmazDooMRight.ttf");
+}
+
 html{
     height: 100%;
 }
@@ -56,26 +61,42 @@ body{
 }
 
 #noticia1:hover{
-    background-color: #D98D62;
+    background-color: #D95959;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     margin-right: 170px;
     margin-left: 170px;
 }
 
+#kanye{
+    z-index: 9;
+    position: absolute;
+    font-family: Doom;
+    left: 870px;
+    top: 50%;
+    font-size: 50px;
+    transition: all 0.8s ease-in-out;
+}
+
+#noticia1:hover #kanye{
+    z-index: 9;
+    position: absolute;
+    left: 270px;
+    top: 50%;
+}
+
 #imagemKanye{
+    z-index: 0;
     width: 300px;
     height: 400px;
     position: relative;
-    right: 2px;
-    left: 2px;
+    left:;
     border-radius: 100px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     transition: all 0.8s ease-in-out;
 }
 
-#imagemKanye:hover{
-    border-radius: 100px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    left: -600px;
+#noticia1:hover #imagemKanye{
+    z-index: 0;
+    left: 270px;
     transition: all 0.8s ease-in-out;
 }
