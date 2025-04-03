@@ -9,8 +9,23 @@
 }
 
 @font-face {
-    font-family: Bipolar;
-    src: url(AwesomeBi_polar-Regular.otf);
+    font-family: Philosopher;
+    src: url('philosopher/Philosopher-Regular.ttf');
+}
+
+@font-face {
+    font-family: CollegeDropout;
+    src: url(dirty_brush_2/DirtyBrush.ttf);
+}
+
+@font-face {
+    font-family: PlayBoi;
+    src: url(skull_cracker/Skull\ Cracker\ Bold\ Italic.otf);
+}
+
+@font-face {
+    font-family: Nike;
+    src: url('nike_2002_04/Nike\ 2002-04.ttf');
 }
 
 html{
@@ -30,9 +45,9 @@ body{
     height: 100%;
 }
 
-#degrade{
+section{
     background: linear-gradient(to bottom,#D95959, #e46b6b, #f18383, #f7a0a0);
-    height: 100%;
+    height: 50%;
 }
 
 #tituloJornal{
@@ -65,7 +80,7 @@ body{
 }
 
 #noticia1:hover{
-    background-color: #D95959;
+    background-color: #7e7e7e;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     margin-right: 170px;
     margin-left: 170px;
@@ -76,20 +91,19 @@ body{
 #kanye{
     z-index: 1;
     position: absolute;
-    font-family: Doom;
-    left: 870px;
+    font-family: CollegeDropout;
+    left: 845px;
     top: 50%;
     font-size: 50px;
     transition: all 0.8s ease-in-out;
     color: white;
     padding: 0px;
     text-shadow: 0px 0px 5px black;
-    
 }
 
 #noticia1:hover #kanye{
     position: absolute;
-    left: 270px;
+    left: 240px;
     top: 50%;
     transform: scale(1.2, 1.2);
 }
@@ -116,16 +130,135 @@ body{
     overflow: hidden;
     font-size: 40px;
     position: absolute;
-    right: 25%;
-    top: 30%;
+    right: 30%;
+    top: 20%;
     color: rgb(0, 0, 0);
-    font-family: Bipolar;
+    font-family: Nike;
+    text-shadow: 0px 0px 3px black;
+    transition: opacity 2s ease-in-out 0.4s;
+    opacity: 0;
+    text-decoration: underline;
+}
+
+body:has(#noticia1:hover) #titulonoticia1{
+    max-width: 1000px;
+    opacity: 1;
+}
+
+#conteudonoticia1{
+    max-width: 0;
+    overflow: hidden;
+    font-size: 25px;
+    position: absolute;
+    right: 30%;
+    top: 35%;
+    font-family: Philosopher;
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+}
+
+body:has(#noticia1:hover) #conteudonoticia1{
+    max-width: 800px;
+    opacity: 1;
+}
+
+#section2{
+    background: linear-gradient(to bottom,#f7a0a0,#f18383,#e46b6b, #D95959);
+    height: 50%;
+}
+
+#noticia2{
+    background-color: #421616;
+    height: 440px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 120px;
+    margin-left: 41%;
+    margin-right: 41%;
+    transition: all 0.8s ease-in-out;
+}
+
+#noticia2:hover{
+    background-color: #1E6652;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    margin-right: 170px;
+    margin-left: 170px;
+}
+
+
+
+#playboi{
+    z-index: 1;
+    position: absolute;
+    font-family: PlayBoi;
+    left: 830px;
+    top: 100%;
+    font-size: 50px;
+    transition: all 0.8s ease-in-out;
+    color: white;
+    padding: 0px;
+    text-shadow: 0px 0px 5px black;
+    font-weight: bolder;
+}
+
+#noticia2:hover #playboi{
+    position: absolute;
+    left: 215px;
+    top: 100%;
+}
+
+#imagemPlayboi{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 42.30%;
+    border-radius: 100px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.8s ease-in-out;
+}
+
+#noticia2:hover #imagemPlayboi{
+    left: 200px;
+    transition: all 0.8s ease-in-out;
+    display: block;
+}
+
+#titulonoticia2{
+    max-width: 0;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    right: 40%;
+    top: 72%;
+    font-family: Nike;
+    color: rgb(0, 0, 0);
     text-shadow: 0px 0px 5px black;
     transition: opacity 2s ease-in-out;
     opacity: 0;
 }
 
-body:has(#noticia1:hover) #titulonoticia1{
+body:has(#noticia2:hover) #titulonoticia2{
+    max-width: 800px;
+    opacity: 1;
+}
+
+#conteudonoticia2{
+    max-width: 0;
+    overflow: hidden;
+    font-size: 25px;
+    position: absolute;
+    right: 30%;
+    top: 90%;
+    font-family: Philosopher;
+    transition: opacity 2s ease-in-out ;
+    opacity: 0;
+}
+
+body:has(#noticia2:hover) #conteudonoticia2{
     max-width: 800px;
     opacity: 1;
 }
