@@ -8,6 +8,11 @@
     src: url("amazdoom/AmazDooMRight.ttf");
 }
 
+@font-face {
+    font-family: Bipolar;
+    src: url(AwesomeBi_polar-Regular.otf);
+}
+
 html{
     height: 100%;
 }
@@ -45,7 +50,6 @@ body{
 }
 
 #noticia1{
-    z-index: 1;
     background-color: #303440;
     height: 440px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -67,36 +71,61 @@ body{
     margin-left: 170px;
 }
 
+
+
 #kanye{
-    z-index: 9;
+    z-index: 1;
     position: absolute;
     font-family: Doom;
     left: 870px;
     top: 50%;
     font-size: 50px;
     transition: all 0.8s ease-in-out;
+    color: white;
+    padding: 0px;
+    text-shadow: 0px 0px 5px black;
+    
 }
 
 #noticia1:hover #kanye{
-    z-index: 9;
     position: absolute;
     left: 270px;
     top: 50%;
+    transform: scale(1.2, 1.2);
 }
 
 #imagemKanye{
-    z-index: 0;
     width: 300px;
     height: 400px;
     position: relative;
-    left:;
+    left: 0;
     border-radius: 100px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     transition: all 0.8s ease-in-out;
+    
 }
 
 #noticia1:hover #imagemKanye{
-    z-index: 0;
-    left: 270px;
+    left: -600px;
     transition: all 0.8s ease-in-out;
+    display: block;
+}
+
+#titulonoticia1{
+    max-width: 0;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    right: 25%;
+    top: 30%;
+    color: rgb(0, 0, 0);
+    font-family: Bipolar;
+    text-shadow: 0px 0px 5px black;
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+}
+
+body:has(#noticia1:hover) #titulonoticia1{
+    max-width: 800px;
+    opacity: 1;
 }
