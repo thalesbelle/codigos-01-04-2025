@@ -79,12 +79,12 @@ section{
     transition: all 0.8s ease-in-out;
 }
 
-#noticia1:hover{
+/*#noticia1:hover{
     background-color: #7e7e7e;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     margin-right: 170px;
     margin-left: 170px;
-}
+}*/
 
 
 
@@ -101,12 +101,12 @@ section{
     text-shadow: 0px 0px 5px black;
 }
 
-#noticia1:hover #kanye{
+/*.kanyehover #kanye{
     position: absolute;
     left: 240px;
     top: 50%;
     transform: scale(1.2, 1.2);
-}
+}*/
 
 #imagemKanye{
     width: 300px;
@@ -119,15 +119,13 @@ section{
     
 }
 
-#noticia1:hover #imagemKanye{
+/*#noticia1:hover #imagemKanye{
     left: -600px;
     transition: all 0.8s ease-in-out;
     display: block;
-}
+}*/
 
 #titulonoticia1{
-    max-width: 0;
-    overflow: hidden;
     font-size: 40px;
     position: absolute;
     right: 30%;
@@ -136,31 +134,27 @@ section{
     font-family: Nike;
     text-shadow: 0px 0px 3px black;
     transition: opacity 2s ease-in-out 0.4s;
-    opacity: 0;
     text-decoration: underline;
 }
 
-body:has(#noticia1:hover) #titulonoticia1{
+/*body:has(#noticia1:hover) #titulonoticia1{
     max-width: 1000px;
     opacity: 1;
-}
+}*/
 
 #conteudonoticia1{
-    max-width: 0;
-    overflow: hidden;
     font-size: 25px;
     position: absolute;
     right: 30%;
     top: 35%;
     font-family: Philosopher;
     transition: opacity 2s ease-in-out;
-    opacity: 0;
 }
 
-body:has(#noticia1:hover) #conteudonoticia1{
+/*body:has(#noticia1:hover) #conteudonoticia1{
     max-width: 800px;
     opacity: 1;
-}
+}*/
 
 #section2{
     background: linear-gradient(to bottom,#f7a0a0,#f18383,#e46b6b, #D95959);
