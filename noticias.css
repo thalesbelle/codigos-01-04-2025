@@ -1,4 +1,14 @@
 @font-face {
+    font-family: Akira;
+    src: url(Akira\ Expanded\ Demo.otf);
+}
+
+@font-face {
+    font-family: Heavitas;
+    src: url(Heavitas.ttf);
+}
+
+@font-face {
     font-family: Fiore;
     src: url("fiore_ebrey/Fiore\ Ebrey\ Demo.ttf");
 }
@@ -32,11 +42,7 @@ html{
     height: 100%;
 }
 
-#cabecalho{
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(to bottom, #BF045B, #D90452, #D95959);
-}
+
 
 body{
     margin: 0;
@@ -48,6 +54,19 @@ body{
 section{
     background: linear-gradient(to bottom,#D95959, #e46b6b, #f18383, #f7a0a0);
     height: 50%;
+}
+
+#section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cabecalho{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, #BF045B, #D90452, #D95959);
 }
 
 #tituloJornal{
@@ -67,6 +86,10 @@ section{
 #noticia1{
     background-color: #303440;
     height: 440px;
+    width: 340px;
+    margin-top: -2.2%;
+    margin-left: 2%;
+    margin-right: 2.3%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     border: 1px;
     display: flex;
@@ -74,185 +97,123 @@ section{
     justify-content: center;
     align-items: center;
     border-radius: 120px;
-    margin-left: 41%;
-    margin-right: 41%;
-    transition: all 0.8s ease-in-out;
 }
 
-/*#noticia1:hover{
-    background-color: #7e7e7e;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
-    margin-right: 170px;
-    margin-left: 170px;
-}*/
 
-
+#imagemKanye{
+    position: relative;
+    width: 300px;
+    height: 400px; 
+    border-radius: 100px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
 
 #kanye{
     z-index: 1;
     position: absolute;
-    font-family: CollegeDropout;
-    left: 845px;
-    top: 50%;
-    font-size: 50px;
-    transition: all 0.8s ease-in-out;
-    color: white;
+    font-family: Doom;
+    left: 43.5%;
+    top: 55%;
+    font-size: 80px;
+    background-image: linear-gradient(to bottom, rgb(49, 49, 49), rgb(87, 87, 87), rgb(141, 141, 141));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.212);
     padding: 0px;
-    text-shadow: 0px 0px 5px black;
+    margin: 0;
 }
 
-/*.kanyehover #kanye{
-    position: absolute;
-    left: 240px;
-    top: 50%;
-    transform: scale(1.2, 1.2);
-}*/
-
-#imagemKanye{
-    width: 300px;
-    height: 400px;
-    position: relative;
-    left: 0;
-    border-radius: 100px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    transition: all 0.8s ease-in-out;
-    
+#noticia1:hover{
+    transition: all 0.4s ease-in-out;
+    height: 460px;
+    width: 360px;
+    margin-top: -2.2%;
+    margin-left: 2%;
+    margin-right: 2.3%;
+    box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-/*#noticia1:hover #imagemKanye{
-    left: -600px;
-    transition: all 0.8s ease-in-out;
-    display: block;
-}*/
+#imagemKanye:hover{
+    transition: all 0.4s ease-in-out;
+    width: 320px;
+    height: 420px; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 #titulonoticia1{
-    font-size: 40px;
+    font-size: 35px;
     position: absolute;
-    right: 30%;
-    top: 20%;
-    color: rgb(0, 0, 0);
-    font-family: Nike;
+    right: 21%;
+    top: 25%;
+    color: rgb(255, 255, 255);
+    font-family: Heavitas;
     text-shadow: 0px 0px 3px black;
-    transition: opacity 2s ease-in-out 0.4s;
-    text-decoration: underline;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
+    
 }
-
-/*body:has(#noticia1:hover) #titulonoticia1{
-    max-width: 1000px;
-    opacity: 1;
-}*/
 
 #conteudonoticia1{
     font-size: 25px;
     position: absolute;
-    right: 30%;
+    right: 18.3%;
     top: 35%;
     font-family: Philosopher;
-    transition: opacity 2s ease-in-out;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 1px black;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
 }
 
-/*body:has(#noticia1:hover) #conteudonoticia1{
-    max-width: 800px;
-    opacity: 1;
-}*/
-
-#section2{
-    background: linear-gradient(to bottom,#f7a0a0,#f18383,#e46b6b, #D95959);
-    height: 50%;
+.noticiaHover1{
+    position: absolute !important;
+    left: 10% !important;
+    transition: all 0.8s ease-in-out !important;
 }
 
-#noticia2{
-    background-color: #421616;
-    height: 440px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    border: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 120px;
-    margin-left: 41%;
-    margin-right: 41%;
-    transition: all 0.8s ease-in-out;
+.noticiaHover2{
+    position: absolute !important;
+    left: 12% !important;
+    transition: all 0.8s ease-in-out !important;
 }
 
-#noticia2:hover{
-    background-color: #1E6652;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
-    margin-right: 170px;
-    margin-left: 170px;
+.noticia1Expansao{
+    background-color: #580029 !important;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
+    width: 1550px !important;
 }
 
-
-
-#playboi{
-    z-index: 1;
-    position: absolute;
-    font-family: PlayBoi;
-    left: 830px;
-    top: 100%;
-    font-size: 50px;
-    transition: all 0.8s ease-in-out;
+#iconeFechar{
     color: white;
-    padding: 0px;
-    text-shadow: 0px 0px 5px black;
-    font-weight: bolder;
-}
-
-#noticia2:hover #playboi{
+    height: 40px;
+    width: 40px;
     position: absolute;
-    left: 215px;
-    top: 100%;
-}
-
-#imagemPlayboi{
-    width: 300px;
-    height: 400px;
-    position: absolute;
-    left: 42.30%;
-    border-radius: 100px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    transition: all 0.8s ease-in-out;
-}
-
-#noticia2:hover #imagemPlayboi{
-    left: 200px;
-    transition: all 0.8s ease-in-out;
-    display: block;
-}
-
-#titulonoticia2{
-    max-width: 0;
-    overflow: hidden;
-    font-size: 40px;
-    position: absolute;
-    right: 40%;
-    top: 72%;
-    font-family: Nike;
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 5px black;
-    transition: opacity 2s ease-in-out;
+    top: 25%;
+    right: 13%;
+    padding: 1px;
     opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
 }
 
-body:has(#noticia2:hover) #titulonoticia2{
-    max-width: 800px;
-    opacity: 1;
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
-#conteudonoticia2{
-    max-width: 0;
-    overflow: hidden;
-    font-size: 25px;
-    position: absolute;
-    right: 30%;
-    top: 90%;
-    font-family: Philosopher;
-    transition: opacity 2s ease-in-out ;
-    opacity: 0;
-}
-
-body:has(#noticia2:hover) #conteudonoticia2{
-    max-width: 800px;
-    opacity: 1;
+.titulonoticia1FadeOut, .conteudonoticia1FadeOut, .iconeFecharFadeOut {
+    opacity: 1 !important; 
+    animation: fadeOut 1s ease-in-out 0.2s forwards !important; 
 }
