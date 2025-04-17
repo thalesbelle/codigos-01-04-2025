@@ -1,17 +1,23 @@
-const noticia1 = document.querySelector("#noticia1"); 
-const titulonoticia1 = document.querySelector("#titulonoticia1");
-const conteudonoticia1 = document.querySelector("#conteudonoticia1");
-const kanye = document.querySelector("#kanye");
-const imagemKanye = document.querySelector("#imagemKanye");
-const iconeFechar = document.querySelector("#iconeFechar");
+const noticia1 = document.querySelector(".noticia1"); 
+const titulonoticia1 = document.querySelector(".titulonoticia1");
+const conteudonoticia1 = document.querySelector(".conteudonoticia1");
+const kanye = document.querySelector(".kanye");
+const imagemNoticias = document.querySelector(".imagemNoticias");
+const iconeFechar = document.querySelector(".iconeFechar");
 const section1 = document.querySelector("#section1");
-const divKanye = [imagemKanye, kanye];
+const divKanye = [imagemNoticias, kanye];
 const divKanye2 = [kanye, noticia1];
+const playboiCarti = document.querySelector(".playboiCarti");
+const imagemPlayboi = document.getElementById("imagemPlayboi");
+const divPlayboi = [imagemPlayboi, playboiCarti]
+const titulonoticia2 = document.getElementById("titulonoticia2");
+const conteudonoticia2 = document.getElementById("conteudonoticia2");
+const noticia2 = document.getElementById("noticia2");
 
 divKanye.forEach(div =>{
     div.addEventListener("click", function () {
         noticia1.classList.add("noticia1Expansao");
-        imagemKanye.classList.add("noticiaHover1");
+        imagemNoticias.classList.add("noticiaHover1");
         kanye.classList.add("noticiaHover2");
 
         titulonoticia1.classList.remove("titulonoticia1FadeOut");
@@ -27,7 +33,7 @@ divKanye.forEach(div =>{
             titulonoticia1.removeAttribute("hidden");
             conteudonoticia1.removeAttribute("hidden");
             iconeFechar.removeAttribute("hidden");
-        }, 1*100);
+        }, 1*200);
         }
     });
 });
@@ -37,25 +43,35 @@ iconeFechar.addEventListener("click", function (){
     conteudonoticia1.classList.add("conteudonoticia1FadeOut"); 
     iconeFechar.classList.add("iconeFecharFadeOut");
 
-    noticia1.classList.remove("noticia1Expansao");
-    imagemKanye.classList.remove("noticiaHover1");
-    kanye.classList.remove("noticiaHover2");
-    
     iconeFechar.setAttribute("hidden", "hidden");
     titulonoticia1.setAttribute("hidden", "hidden");
     conteudonoticia1.setAttribute("hidden", "hidden");
+
+    noticia1.classList.remove("noticia1Expansao");
+    imagemNoticias.classList.remove("noticiaHover1");
+    kanye.classList.remove("noticiaHover2");
 });
 
-kanye.addEventListener("mouseover", function (){
-    imagemKanye.style.transition = "all 0.4s ease-in-out";
-    imagemKanye.style.width = "320px";
-    imagemKanye.style.height = "420px";
-    kanye.style.fontSize = "85px";
-});
+divPlayboi.forEach(div =>{
+    div.addEventListener("click", function () {
+        noticia2.classList.add("noticia2Expansao");
+        imagemPlayboi.classList.add("noticiaHover3");
+        playboiCarti.classList.add("noticiaHover4");
 
-kanye.addEventListener("mouseout", function (){
-    imagemKanye.style.transition = "all 0.4s ease-in-out"
-    imagemKanye.style.width = "300px"
-    imagemKanye.style.height = "400px"
-    kanye.style.fontSize = "80px";
+        titulonoticia2.classList.remove("titulonoticia1FadeOut");
+        conteudonoticia2.classList.remove("conteudonoticia1FadeOut"); 
+        iconeFechar.classList.remove("iconeFecharFadeOut"); 
+
+        if(titulonoticia2.getAttribute("hidden") === null){
+            titulonoticia2.removeAttribute("hidden");
+            conteudonoticia2.removeAttribute("hidden");
+        }
+        else{
+            setTimeout(function (){
+            titulonoticia2.removeAttribute("hidden");
+            conteudonoticia2.removeAttribute("hidden");
+            iconeFechar.removeAttribute("hidden");
+        }, 1*200);
+        }
+    });
 });
