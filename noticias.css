@@ -194,6 +194,7 @@ body{
     border-radius: 120px;
     background-color: #303440;
     transition: all 0.8s ease-in-out;
+    margin-bottom: 50px;
 }
 
 #playboiCarti{
@@ -257,6 +258,26 @@ body{
     opacity: 0;
     animation: fadeIn 1s ease-in-out 0.4s forwards;
 }
+
+#musicasCarti{
+    position: absolute;
+    top: 90%;
+    right: 14%;
+    height: 40px;
+    width: 40px;
+    padding: 1px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
+    color: rgb(255, 255, 255);
+    font-family: Heavitas;
+    transition: all 0.3s ease-in-out;
+}
+
+#musicasCarti:hover{
+    color: rgb(0, 73, 24);
+    text-decoration: underline;
+} 
+
 
 #menuOpcoes{
     z-index: 3;
@@ -363,4 +384,10 @@ body{
     text-align: left;
     bottom: 0;
     margin: 10px;
+    text-decoration: none;
+}
+
+.section2{
+    padding-bottom: 100px;
+    margin-bottom: 100px;
 }

@@ -12,6 +12,7 @@ const conteudonoticia2 = document.getElementById("conteudonoticia2");
 const noticia2 = document.getElementById("noticia2");
 const iconeFechar2 = document.querySelector("#iconeFechar2");
 const musicasKanye = document.querySelector("#musicasKanye");
+const musicasCarti = document.querySelector("#musicasCarti");
 const divKanye = [imagemNoticias, kanye];
 const divKanye2 = [kanye, noticia1];
 const divPlayboi = [imagemPlayboi, playboiCarti]
@@ -58,11 +59,13 @@ divPlayboi.forEach(div =>{
         playboiCarti.classList.add("noticiaHover4");
 
         if(titulonoticia2.getAttribute("hidden") === null){
+            musicasCarti.removeAttribute("hidden");
             titulonoticia2.removeAttribute("hidden");
             conteudonoticia2.removeAttribute("hidden");
         }
         else{
             setTimeout(function (){
+                musicasCarti.removeAttribute("hidden");
                 titulonoticia2.removeAttribute("hidden");
                 conteudonoticia2.removeAttribute("hidden");
                 iconeFechar2.removeAttribute("hidden");
@@ -75,6 +78,7 @@ iconeFechar2.addEventListener("click", function (){
     iconeFechar2.setAttribute("hidden", "hidden");
     titulonoticia2.setAttribute("hidden", "hidden");
     conteudonoticia2.setAttribute("hidden", "hidden");
+    musicasCarti.setAttribute("hidden", "hidden");
 
     noticia2.classList.remove("noticia2Expansao");
     imagemPlayboi.classList.remove("noticiaHover3");
