@@ -41,7 +41,7 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    background-color: gray;
+    background-color: rgb(27, 27, 27);
 }
 
 .header{
@@ -54,12 +54,7 @@ body{
 #cabecalho{
     width: 100%;
     height: 100px;
-    background: linear-gradient(to bottom, #BF045B, #D90452, #D95959);
-}
-
-section{
-    background: gray;
-    height: 50%;
+    background: rgb(43, 43, 43);
 }
 
 .section1{
@@ -78,11 +73,11 @@ section{
     font-size: 80px;
     font-family: Fiore;
     margin: 0;
-    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(97, 97, 97), white);
-    -webkit-background-clip: text;
+    background: linear-gradient(to bottom, rgb(36, 36, 36), rgb(97, 0, 0),white);
     background-clip: text;
     color: transparent;
-    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.212);
+    padding: 0px;
 }
 
 .noticia1{
@@ -105,7 +100,7 @@ section{
     width: 300px;
     height: 400px; 
     border-radius: 100px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.5);
     transition: all 0.8s ease-in-out;
 }
 
@@ -122,6 +117,18 @@ section{
     text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.212);
     padding: 0px;
     transition: all 0.8s ease-in-out
+}
+
+#musicasKanye:visited{
+    position: absolute;
+    top: 90%;
+    right: 10%;
+    height: 40px;
+    width: 40px;
+    padding: 1px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
+    color: white;
 }
 
 @keyframes fadeIn {
@@ -143,7 +150,6 @@ section{
     text-shadow: 0px 0px 3px black;
     opacity: 0;
     animation: fadeIn 1s ease-in-out 0.4s forwards;
-    
 }
 
 .conteudonoticia1{
@@ -162,7 +168,6 @@ section{
     position: absolute;
     top: 10%;
     right: 5%;
-    color: white;
     height: 40px;
     width: 40px;
     padding: 1px;
@@ -170,19 +175,117 @@ section{
     animation: fadeIn 1s ease-in-out 0.4s forwards;
 }
 
+#noticia2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 440px;
+    width: 340px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border: 1px;
+    border-radius: 120px;
+    background-color: #303440;
+    transition: all 0.8s ease-in-out;
+}
+
 #playboiCarti{
     z-index: 1;
-    position: absolute;
+    position: relative;
     margin-top: 330px;
-    margin-left: 50px;
+    margin-left: 40px;
     font-family: Playboi;
-    font-size: 60px;
-    background-image: linear-gradient(to bottom, rgb(49, 49, 49), rgb(87, 87, 87), rgb(141, 141, 141));
+    font-size: 50px;
+    background-color: white;
     background-clip: text;
     color: transparent;
-    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.212);
+    text-shadow: 0px 3px 3px black;
     padding: 0px;
     transition: all 0.8s ease-in-out
+}
+
+#imagemPlayboi{
+    position: absolute;
+    top: 5%;
+    left: 6%;
+    width: 300px;
+    height: 400px; 
+    border-radius: 100px;
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.5);
+    transition: all 0.8s ease-in-out;
+    margin: 0;
+}
+
+#titulonoticia2{
+    position: absolute;
+    right: 32%;
+    top: 10%;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    font-family: Heavitas;
+    text-shadow: 0px 0px 3px black;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
+}
+
+#conteudonoticia2{
+    position: relative;
+    margin-top: -250px;
+    margin-left: 350px;
+    font-size: 25px;
+    font-family: Philosopher;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 1px black;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
+}
+
+#iconeFechar2{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    height: 40px;
+    width: 40px;
+    padding: 1px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
+}
+
+#menuOpcoes{
+    z-index: 3;
+    position: fixed;
+    top: 10%;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+}
+
+#menu{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    font-family: Heavitas;
+    font-size: 15px;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    transition: all 0.8s ease-in-out;
+}
+
+.opcao{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-family: Heavitas;
+    font-size: 15px;
+    color: white;
+    text-shadow: 0px 0px 2px rgb(56, 56, 56);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.opcao:hover{
+    color: red;
+    text-decoration: underline;
 }
 /*============================================================================*/
 
@@ -201,22 +304,23 @@ section{
 
 .noticia1Expansao{
     transition: all 0.8s ease-in-out;
-    background-color: #580029 !important;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
+    background-color: rgb(104, 49, 139) !important;
+    box-shadow: 0px 0px 17px rgb(0, 0, 0) !important;
     width: 1550px !important;
 }
 
 .noticia2Expansao{
     transition: all 0.8s ease-in-out;
-    background-color: #580029 !important;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
+    background-color: rgb(30, 108, 85) !important;
+    box-shadow: 0px 0px 17px rgb(0, 0, 0) !important;
     width: 1550px !important;
 }
 
 .noticiaHover3{
     transition: all 0.8s ease-in-out !important;
     position: relative !important;
-    margin-left: 25px !important;
+    margin-left: -70px !important;
+    
 }
 
 .noticiaHover4{
@@ -224,4 +328,32 @@ section{
     margin-left: 50px !important;
     margin-top: 330px !important;
     transition: all 0.8s ease-in-out !important;
+}
+
+@keyframes rgbAnimation {
+    0% {color: red;}
+    25% {color: green;}
+    50% {color: blue;}
+    75% {color:rgb(248, 53, 222);}
+    100% {color: red;}
+}
+
+.rgb-text {
+    font-size: 15px;
+    font-weight: bold;
+    animation: rgbAnimation 3s infinite;
+}
+
+#github{
+    text-align: left;
+    text-shadow: 0px 0px 5px black;
+}
+
+#githublink {
+    font-family: Heavitas;
+    font-size: 12px;
+    position: fixed; 
+    text-align: left;
+    bottom: 0;
+    margin: 10px;
 }
